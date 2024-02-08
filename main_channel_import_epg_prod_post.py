@@ -138,7 +138,7 @@ def post_json(json_file, csv_writer, csv_row):
             "Yes(" + str(response_channels.status_code) + ")",
         })
     else:
-        print(response_channels.status_code + " | Channel <" +
+        print(str(response_channels.status_code) + " | Channel <" +
               json_file["id"].split("$")[1] + ">")
         csv_writer.writerow({
             "channel_name":
